@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSprout — Find the right class for your child</title>
+
+  <!-- Google Fonts: Fredoka for headings, Work Sans for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAVIGATION ===================== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="logo">Skill<span>Sprout</span></a>
+
+      <nav class="nav-links">
+        <ul>
+          <li><a href="#categories">Browse Classes</a></li>
+          <li><a href="#how-it-works">How it Works</a></li>
+          <li><a href="#for-instructors">For Instructors</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#" class="btn btn-text">Log in</a>
+        <a href="#" class="btn btn-primary">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="eyebrow">Discover · Compare · Enroll</span>
+      <h1>Where curiosity puts down roots.</h1>
+      <p>
+        Browse painting, music, dance, coding, sports and more.
+        Filter by your child's age, your budget and your location
+        to find a class they'll actually look forward to.
+      </p>
+
+      <!-- Search bar -->
+      <form class="search-bar">
+        <div class="search-field">
+          <label for="age">Age group</label>
+          <select id="age" name="age">
+            <option value="">Any age</option>
+            <option value="3-5">3 - 5 years</option>
+            <option value="6-9">6 - 9 years</option>
+            <option value="10-13">10 - 13 years</option>
+            <option value="14-17">14 - 17 years</option>
+          </select>
+        </div>
+
+        <div class="search-field">
+          <label for="activity">Activity</label>
+          <select id="activity" name="activity">
+            <option value="">Any activity</option>
+            <option value="art">Painting &amp; Art</option>
+            <option value="music">Music</option>
+            <option value="dance">Dance</option>
+            <option value="coding">Coding &amp; Robotics</option>
+            <option value="sports">Sports</option>
+            <option value="drama">Drama &amp; Speaking</option>
+          </select>
+        </div>
+
+        <div class="search-field">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="City or area">
+        </div>
+
+        <button type="submit" class="btn btn-primary search-btn">Search classes</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== CATEGORIES SECTION ===================== -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <h2>What does your child want to explore?</h2>
+      <p class="section-sub">Six places to start growing a new skill.</p>
+
+      <div class="vine-wrap">
+        <!-- Decorative vine illustration, sits behind the cards -->
+        <svg class="vine" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 40 C 150 0, 300 80, 450 40 S 750 0, 900 40 S 1100 80, 1200 30"
+                fill="none" stroke="#BFE3B4" stroke-width="3" />
+          <circle cx="150" cy="14" r="5" fill="#BFE3B4" />
+          <circle cx="450" cy="44" r="5" fill="#BFE3B4" />
+          <circle cx="750" cy="6" r="5" fill="#BFE3B4" />
+          <circle cx="1050" cy="58" r="5" fill="#BFE3B4" />
+        </svg>
+
+        <div class="category-grid">
+          <a href="#" class="category-card">
+            <span class="category-icon">🎨</span>
+            <h3>Painting &amp; Art</h3>
+            <p>Brushes, colours and big imaginations.</p>
+          </a>
+
+          <a href="#" class="category-card">
+            <span class="category-icon">🎵</span>
+            <h3>Music</h3>
+            <p>Piano, guitar, vocals and rhythm.</p>
+          </a>
+
+          <a href="#" class="category-card">
+            <span class="category-icon">💃</span>
+            <h3>Dance</h3>
+            <p>Classical, contemporary and freestyle.</p>
+          </a>
+
+          <a href="#" class="category-card">
+            <span class="category-icon">💻</span>
+            <h3>Coding &amp; Robotics</h3>
+            <p>Build, code and create with tech.</p>
+          </a>
+
+          <a href="#" class="category-card">
+            <span class="category-icon">⚽</span>
+            <h3>Sports</h3>
+            <p>Football, swimming, badminton and more.</p>
+          </a>
+
+          <a href="#" class="category-card">
+            <span class="category-icon">🎭</span>
+            <h3>Drama &amp; Speaking</h3>
+            <p>Confidence on and off the stage.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2>How SkillSprout works</h2>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <h3>Search</h3>
+          <p>Tell us your child's age, interests and your budget.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <h3>Compare</h3>
+          <p>See instructor profiles, schedules, fees and reviews side by side.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <h3>Enroll</h3>
+          <p>Book a class and your child takes their first lesson.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSTRUCTOR CTA ===================== -->
+  <section class="instructor-cta" id="for-instructors">
+    <div class="container instructor-cta-content">
+      <div>
+        <h2>Teach what you love. Reach families nearby.</h2>
+        <p>Create a free profile, list your classes and start filling your schedule with students who are excited to learn.</p>
+      </div>
+      <a href="#" class="btn btn-secondary">List your classes</a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">Skill<span>Sprout</span></a>
+        <p>A personalised discovery hub for children's skill development.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#categories">Browse Classes</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#how-it-works">How it Works</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>For Instructors</h4>
+        <ul>
+          <li><a href="#for-instructors">List your Classes</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SkillSprout. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
