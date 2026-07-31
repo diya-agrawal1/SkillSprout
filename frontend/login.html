@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in — SkillSprout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-body">
+
+  <!-- Minimal header — no nav clutter on auth pages -->
+  <header class="auth-header">
+    <a href="index.html" class="logo">Skill<span>Sprout</span></a>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-card">
+
+      <!-- Tab switcher: Log in / Sign up -->
+      <div class="auth-tabs">
+        <button class="auth-tab auth-tab--active" id="tabLogin">Log in</button>
+        <button class="auth-tab" id="tabSignup">Sign up</button>
+      </div>
+
+      <!-- ===== LOGIN FORM ===== -->
+      <div class="auth-form" id="loginForm">
+        <h1 class="auth-title">Welcome back</h1>
+        <p class="auth-sub">Log in to manage enrollments and saved classes.</p>
+
+        <div class="form-group">
+          <label for="loginEmail">Email address</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">
+            Password
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </label>
+          <div class="input-wrap">
+            <input type="password" id="loginPassword" placeholder="Enter your password">
+            <button type="button" class="toggle-pw" data-target="loginPassword">👁</button>
+          </div>
+        </div>
+
+        <button class="btn btn-primary auth-submit" id="loginBtn">Log in</button>
+
+        <div class="auth-divider"><span>or</span></div>
+
+        <button class="btn btn-google">
+          <img src="https://www.google.com/favicon.ico" alt="" width="16" height="16">
+          Continue with Google
+        </button>
+
+        <p class="auth-switch">
+          Don't have an account? <a href="#" id="switchToSignup">Sign up</a>
+        </p>
+      </div>
+
+      <!-- ===== SIGNUP FORM ===== -->
+      <div class="auth-form hidden" id="signupForm">
+        <h1 class="auth-title">Create your account</h1>
+        <p class="auth-sub">Join SkillSprout as a parent or an instructor.</p>
+
+        <!-- Role toggle -->
+        <div class="role-toggle">
+          <button class="role-btn role-btn--active" data-role="parent">👨‍👩‍👧 I'm a Parent</button>
+          <button class="role-btn" data-role="instructor">🎓 I'm an Instructor</button>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="signupFirst">First name</label>
+            <input type="text" id="signupFirst" placeholder="Aarav">
+          </div>
+          <div class="form-group">
+            <label for="signupLast">Last name</label>
+            <input type="text" id="signupLast" placeholder="Sharma">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="signupEmail">Email address</label>
+          <input type="email" id="signupEmail" placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="signupPhone">Phone number</label>
+          <input type="tel" id="signupPhone" placeholder="+91 98765 43210">
+        </div>
+
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <div class="input-wrap">
+            <input type="password" id="signupPassword" placeholder="At least 8 characters">
+            <button type="button" class="toggle-pw" data-target="signupPassword">👁</button>
+          </div>
+          <div class="password-strength" id="strengthBar">
+            <div class="strength-fill" id="strengthFill"></div>
+          </div>
+          <p class="strength-label" id="strengthLabel"></p>
+        </div>
+
+        <!-- Instructor-only field (hidden by default) -->
+        <div class="form-group instructor-only hidden" id="specialtyGroup">
+          <label for="signupSpecialty">Your teaching specialty</label>
+          <select id="signupSpecialty">
+            <option value="">Select a category</option>
+            <option value="art">Painting &amp; Art</option>
+            <option value="music">Music</option>
+            <option value="dance">Dance</option>
+            <option value="coding">Coding &amp; Robotics</option>
+            <option value="sports">Sports</option>
+            <option value="drama">Drama &amp; Speaking</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="agreeTerms">
+            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+          </label>
+        </div>
+
+        <button class="btn btn-primary auth-submit" id="signupBtn">Create account</button>
+
+        <div class="auth-divider"><span>or</span></div>
+
+        <button class="btn btn-google">
+          <img src="https://www.google.com/favicon.ico" alt="" width="16" height="16">
+          Continue with Google
+        </button>
+
+        <p class="auth-switch">
+          Already have an account? <a href="#" id="switchToLogin">Log in</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Side illustration panel -->
+    <div class="auth-illustration">
+      <div class="illustration-content">
+        <div class="illustration-emoji">🌱</div>
+        <h2>Every great skill starts with a single step.</h2>
+        <p>Join thousands of families who found the perfect class for their child on SkillSprout.</p>
+        <div class="testimonial">
+          <p class="testimonial-text">"My daughter discovered her love for dance through SkillSprout. She hasn't stopped smiling since!"</p>
+          <p class="testimonial-author">— Sunita M., parent of a 9-year-old</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — SkillSprout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- SIDEBAR NAV -->
+  <aside class="dash-sidebar">
+    <a href="index.html" class="logo dash-logo">Skill<span>Sprout</span></a>
+
+    <nav class="dash-nav">
+      <a href="#" class="dash-nav-item dash-nav-item--active" data-section="overview">
+        <span class="dash-nav-icon">📊</span> Overview
+      </a>
+      <a href="#" class="dash-nav-item" data-section="classes">
+        <span class="dash-nav-icon">📚</span> My Classes
+      </a>
+      <a href="#" class="dash-nav-item" data-section="students">
+        <span class="dash-nav-icon">👥</span> Students
+      </a>
+      <a href="#" class="dash-nav-item" data-section="reviews">
+        <span class="dash-nav-icon">⭐</span> Reviews
+      </a>
+      <a href="#" class="dash-nav-item" data-section="earnings">
+        <span class="dash-nav-icon">💰</span> Earnings
+      </a>
+    </nav>
+
+    <div class="dash-profile">
+      <div class="dash-avatar">P</div>
+      <div>
+        <p class="dash-profile-name">Priya Sharma</p>
+        <p class="dash-profile-role">Instructor</p>
+      </div>
+      <a href="login.html" class="dash-logout" title="Log out">⏏</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="dash-main">
+
+    <!-- Top bar -->
+    <div class="dash-topbar">
+      <div>
+        <h1 class="dash-page-title" id="pageTitle">Overview</h1>
+        <p class="dash-page-sub" id="pageSub">Welcome back, Priya! Here's what's happening.</p>
+      </div>
+      <a href="#" class="btn btn-primary" id="topbarAction">+ Add new class</a>
+    </div>
+
+    <!-- ===== OVERVIEW SECTION ===== -->
+    <section class="dash-section" id="sectionOverview">
+
+      <!-- Stats row -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-card-icon">👥</span>
+          <div>
+            <p class="stat-card-value">48</p>
+            <p class="stat-card-label">Total students</p>
+          </div>
+          <span class="stat-card-change positive">+4 this month</span>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card-icon">📚</span>
+          <div>
+            <p class="stat-card-value">3</p>
+            <p class="stat-card-label">Active classes</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card-icon">⭐</span>
+          <div>
+            <p class="stat-card-value">4.8</p>
+            <p class="stat-card-label">Average rating</p>
+          </div>
+          <span class="stat-card-change positive">124 reviews</span>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card-icon">💰</span>
+          <div>
+            <p class="stat-card-value">₹57,600</p>
+            <p class="stat-card-label">This month</p>
+          </div>
+          <span class="stat-card-change positive">+12% vs last</span>
+        </div>
+      </div>
+
+      <!-- Two column: upcoming sessions + recent enrollments -->
+      <div class="overview-grid">
+
+        <!-- Upcoming sessions -->
+        <div class="dash-card">
+          <h3 class="dash-card-title">Upcoming sessions</h3>
+          <div class="session-list">
+            <div class="session-item">
+              <div class="session-dot dot-dance"></div>
+              <div class="session-info">
+                <p class="session-name">Bharatanatyam for Beginners</p>
+                <p class="session-meta">Today · 4:00 PM – 5:00 PM · 10 students</p>
+              </div>
+              <span class="session-badge">Today</span>
+            </div>
+            <div class="session-item">
+              <div class="session-dot dot-dance"></div>
+              <div class="session-info">
+                <p class="session-name">Bharatanatyam for Beginners</p>
+                <p class="session-meta">Tomorrow · 5:30 PM – 6:30 PM · 11 students</p>
+              </div>
+              <span class="session-badge">Tomorrow</span>
+            </div>
+            <div class="session-item">
+              <div class="session-dot dot-music"></div>
+              <div class="session-info">
+                <p class="session-name">Classical Vocals — Intermediate</p>
+                <p class="session-meta">Thu, 3 Jul · 6:00 PM – 7:00 PM · 8 students</p>
+              </div>
+              <span class="session-badge badge-future">Thu</span>
+            </div>
+            <div class="session-item">
+              <div class="session-dot dot-dance"></div>
+              <div class="session-info">
+                <p class="session-name">Bharatanatyam — Advanced</p>
+                <p class="session-meta">Sat, 5 Jul · 10:00 AM – 12:00 PM · 7 students</p>
+              </div>
+              <span class="session-badge badge-future">Sat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent enrollments -->
+        <div class="dash-card">
+          <h3 class="dash-card-title">Recent enrollments</h3>
+          <div class="enrollment-list">
+            <div class="enrollment-item">
+              <div class="enroll-avatar">S</div>
+              <div>
+                <p class="enroll-name">Sneha Patel</p>
+                <p class="enroll-class">Bharatanatyam for Beginners</p>
+              </div>
+              <span class="enroll-time">2h ago</span>
+            </div>
+            <div class="enrollment-item">
+              <div class="enroll-avatar">R</div>
+              <div>
+                <p class="enroll-name">Riya Gupta</p>
+                <p class="enroll-class">Bharatanatyam — Advanced</p>
+              </div>
+              <span class="enroll-time">Yesterday</span>
+            </div>
+            <div class="enrollment-item">
+              <div class="enroll-avatar">A</div>
+              <div>
+                <p class="enroll-name">Aryan Shah</p>
+                <p class="enroll-class">Classical Vocals</p>
+              </div>
+              <span class="enroll-time">2 days ago</span>
+            </div>
+            <div class="enrollment-item">
+              <div class="enroll-avatar">M</div>
+              <div>
+                <p class="enroll-name">Meghna Rao</p>
+                <p class="enroll-class">Bharatanatyam for Beginners</p>
+              </div>
+              <span class="enroll-time">3 days ago</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== MY CLASSES SECTION ===== -->
+    <section class="dash-section hidden" id="sectionClasses">
+
+      <div class="classes-toolbar">
+        <input type="text" class="classes-search" placeholder="Search your classes…">
+        <a href="#" class="btn btn-primary">+ Add new class</a>
+      </div>
+
+      <div class="classes-table-wrap">
+        <table class="classes-table">
+          <thead>
+            <tr>
+              <th>Class name</th>
+              <th>Category</th>
+              <th>Schedule</th>
+              <th>Students</th>
+              <th>Price</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="table-class-name">
+                  <span class="table-emoji">💃</span>
+                  <div>
+                    <p class="table-title">Bharatanatyam for Beginners</p>
+                    <p class="table-sub">Ages 6–12</p>
+                  </div>
+                </div>
+              </td>
+              <td><span class="table-badge badge-dance">Dance</span></td>
+              <td>Mon &amp; Wed, 4 PM</td>
+              <td>21 / 24</td>
+              <td>₹1,200/mo</td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td>
+                <div class="table-actions">
+                  <button class="action-btn">✏️</button>
+                  <button class="action-btn">👁</button>
+                  <button class="action-btn action-btn--danger">🗑</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-class-name">
+                  <span class="table-emoji">💃</span>
+                  <div>
+                    <p class="table-title">Bharatanatyam — Advanced</p>
+                    <p class="table-sub">Ages 12–17</p>
+                  </div>
+                </div>
+              </td>
+              <td><span class="table-badge badge-dance">Dance</span></td>
+              <td>Sat, 10 AM</td>
+              <td>7 / 10</td>
+              <td>₹1,800/mo</td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td>
+                <div class="table-actions">
+                  <button class="action-btn">✏️</button>
+                  <button class="action-btn">👁</button>
+                  <button class="action-btn action-btn--danger">🗑</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-class-name">
+                  <span class="table-emoji">🎵</span>
+                  <div>
+                    <p class="table-title">Classical Vocals — Intermediate</p>
+                    <p class="table-sub">Ages 10–16</p>
+                  </div>
+                </div>
+              </td>
+              <td><span class="table-badge badge-music">Music</span></td>
+              <td>Tue &amp; Thu, 6 PM</td>
+              <td>8 / 12</td>
+              <td>₹1,000/mo</td>
+              <td><span class="status-badge status-draft">Draft</span></td>
+              <td>
+                <div class="table-actions">
+                  <button class="action-btn">✏️</button>
+                  <button class="action-btn">👁</button>
+                  <button class="action-btn action-btn--danger">🗑</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== STUDENTS SECTION ===== -->
+    <section class="dash-section hidden" id="sectionStudents">
+      <div class="classes-toolbar">
+        <input type="text" class="classes-search" placeholder="Search students…">
+        <select class="classes-search" style="flex: 0 0 200px;">
+          <option>All classes</option>
+          <option>Bharatanatyam — Beginners</option>
+          <option>Bharatanatyam — Advanced</option>
+          <option>Classical Vocals</option>
+        </select>
+      </div>
+
+      <div class="classes-table-wrap">
+        <table class="classes-table">
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Class enrolled</th>
+              <th>Enrolled on</th>
+              <th>Monthly fee</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="table-class-name"><div class="enroll-avatar">S</div><div><p class="table-title">Sneha Patel</p><p class="table-sub">Age 8</p></div></div></td>
+              <td>Bharatanatyam for Beginners</td>
+              <td>1 Jul 2026</td>
+              <td>₹1,200</td>
+              <td><span class="status-badge status-active">Active</span></td>
+            </tr>
+            <tr>
+              <td><div class="table-class-name"><div class="enroll-avatar">R</div><div><p class="table-title">Riya Gupta</p><p class="table-sub">Age 14</p></div></div></td>
+              <td>Bharatanatyam — Advanced</td>
+              <td>28 Jun 2026</td>
+              <td>₹1,800</td>
+              <td><span class="status-badge status-active">Active</span></td>
+            </tr>
+            <tr>
+              <td><div class="table-class-name"><div class="enroll-avatar">A</div><div><p class="table-title">Aryan Shah</p><p class="table-sub">Age 11</p></div></div></td>
+              <td>Classical Vocals</td>
+              <td>27 Jun 2026</td>
+              <td>₹1,000</td>
+              <td><span class="status-badge status-active">Active</span></td>
+            </tr>
+            <tr>
+              <td><div class="table-class-name"><div class="enroll-avatar">M</div><div><p class="table-title">Meghna Rao</p><p class="table-sub">Age 9</p></div></div></td>
+              <td>Bharatanatyam for Beginners</td>
+              <td>25 Jun 2026</td>
+              <td>₹1,200</td>
+              <td><span class="status-badge status-paused">Paused</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS SECTION ===== -->
+    <section class="dash-section hidden" id="sectionReviews">
+      <div class="reviews-dash-list">
+        <div class="review-card">
+          <div class="review-top">
+            <div class="reviewer-avatar">S</div>
+            <div><p class="reviewer-name">Sunita Mehta</p><p class="review-date">June 2026 · Bharatanatyam for Beginners</p></div>
+            <span class="review-stars">⭐⭐⭐⭐⭐</span>
+          </div>
+          <p class="review-text">My daughter has been attending for 3 months and the transformation is incredible. Priya ma'am is patient, encouraging and deeply knowledgeable.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-top">
+            <div class="reviewer-avatar">R</div>
+            <div><p class="reviewer-name">Rajesh Kumar</p><p class="review-date">May 2026 · Bharatanatyam for Beginners</p></div>
+            <span class="review-stars">⭐⭐⭐⭐⭐</span>
+          </div>
+          <p class="review-text">Small batch size really makes a difference. My son gets individual attention and has learned so much in just 2 months.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-top">
+            <div class="reviewer-avatar">A</div>
+            <div><p class="reviewer-name">Anita Desai</p><p class="review-date">April 2026 · Bharatanatyam — Advanced</p></div>
+            <span class="review-stars">⭐⭐⭐⭐</span>
+          </div>
+          <p class="review-text">Great class overall. Teaching quality is excellent. Only minor issue is parking on weekdays.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EARNINGS SECTION ===== -->
+    <section class="dash-section hidden" id="sectionEarnings">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-card-icon">💰</span>
+          <div><p class="stat-card-value">₹57,600</p><p class="stat-card-label">This month</p></div>
+          <span class="stat-card-change positive">+12%</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-icon">📅</span>
+          <div><p class="stat-card-value">₹3,20,400</p><p class="stat-card-label">This year</p></div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-icon">⏳</span>
+          <div><p class="stat-card-value">₹12,000</p><p class="stat-card-label">Pending payout</p></div>
+        </div>
+      </div>
+
+      <div class="dash-card" style="margin-top: 24px;">
+        <h3 class="dash-card-title">Monthly earnings breakdown</h3>
+        <div class="earnings-table-wrap">
+          <table class="classes-table">
+            <thead>
+              <tr><th>Class</th><th>Students</th><th>Fee/student</th><th>Total</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Bharatanatyam for Beginners</td><td>21</td><td>₹1,200</td><td><strong>₹25,200</strong></td></tr>
+              <tr><td>Bharatanatyam — Advanced</td><td>7</td><td>₹1,800</td><td><strong>₹12,600</strong></td></tr>
+              <tr><td>Classical Vocals — Intermediate</td><td>8</td><td>₹1,000</td><td><strong>₹8,000</strong></td></tr>
+              <tr class="earnings-total"><td colspan="3"><strong>Platform fee (15%)</strong></td><td><strong>- ₹6,870</strong></td></tr>
+              <tr class="earnings-total earnings-net"><td colspan="3"><strong>Net earnings</strong></td><td><strong>₹38,930</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

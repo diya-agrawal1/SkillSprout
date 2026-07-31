@@ -1,0 +1,444 @@
+/* =========================================================
+   SkillSprout — class-detail.css
+   ========================================================= */
+
+/* BREADCRUMB */
+.breadcrumb {
+  background-color: var(--color-sage);
+  padding: 12px 0;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(31,78,61,0.08);
+}
+
+.breadcrumb a {
+  color: var(--color-leaf);
+  font-weight: 500;
+}
+
+.breadcrumb span {
+  margin: 0 8px;
+  color: rgba(45,58,52,0.4);
+}
+
+/* DETAIL LAYOUT: main column + sticky sidebar */
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  padding-top: 40px;
+  padding-bottom: 64px;
+  align-items: start;
+}
+
+/* CLASS HEADER */
+.class-header {
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  border: 1px solid rgba(31,78,61,0.08);
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.class-header-image {
+  background-color: var(--card-color, #EAF4E6);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.class-header-emoji {
+  font-size: 5rem;
+}
+
+.detail-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.detail-mode {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.85);
+  color: var(--color-forest);
+}
+
+.class-header-info {
+  padding: 24px;
+}
+
+.class-header-info h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 8px;
+}
+
+.class-tagline {
+  color: rgba(45,58,52,0.75);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.class-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-value {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-forest);
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: rgba(45,58,52,0.55);
+}
+
+/* DETAIL SECTIONS */
+.detail-section {
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  border: 1px solid rgba(31,78,61,0.08);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.detail-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.detail-section p {
+  color: rgba(45,58,52,0.8);
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.detail-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* WHAT YOU'LL LEARN LIST */
+.learn-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.learn-list li {
+  font-size: 0.9rem;
+  color: rgba(45,58,52,0.85);
+  padding: 8px 12px;
+  background-color: var(--color-sage);
+  border-radius: 8px;
+}
+
+/* SCHEDULE TABLE */
+.schedule-table {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(31,78,61,0.1);
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  gap: 12px;
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  align-items: center;
+}
+
+.schedule-row + .schedule-row {
+  border-top: 1px solid rgba(31,78,61,0.07);
+}
+
+.schedule-header {
+  background-color: var(--color-sage);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--color-forest);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.slots-left {
+  display: inline-block;
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.slots-full {
+  background-color: #FFEBEE;
+  color: #C62828;
+}
+
+/* REVIEWS */
+.review-summary {
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: rgba(45,58,52,0.6);
+  margin-left: 8px;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.review-card {
+  padding: 16px;
+  background-color: var(--color-bg);
+  border-radius: 10px;
+  border: 1px solid rgba(31,78,61,0.07);
+}
+
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.reviewer-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--color-forest);
+  color: white;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reviewer-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.review-date {
+  font-size: 0.78rem;
+  color: rgba(45,58,52,0.5);
+}
+
+.review-stars {
+  margin-left: auto;
+  font-size: 0.85rem;
+}
+
+.review-text {
+  font-size: 0.88rem;
+  color: rgba(45,58,52,0.8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.show-more-btn {
+  font-size: 0.9rem;
+  padding: 0;
+  color: var(--color-leaf);
+}
+
+/* ENROLL CARD (sticky right sidebar) */
+.enroll-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  border: 1px solid rgba(31,78,61,0.1);
+  padding: 28px;
+  position: sticky;
+  top: 88px;
+  box-shadow: 0 8px 24px rgba(31,78,61,0.08);
+}
+
+.enroll-price {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-forest);
+  margin-bottom: 4px;
+}
+
+.enroll-per {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: rgba(45,58,52,0.5);
+}
+
+.enroll-note {
+  font-size: 0.82rem;
+  color: rgba(45,58,52,0.6);
+  margin-bottom: 20px;
+}
+
+.enroll-details {
+  border-top: 1px solid rgba(31,78,61,0.08);
+  border-bottom: 1px solid rgba(31,78,61,0.08);
+  padding: 16px 0;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.enroll-detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  gap: 12px;
+}
+
+.enroll-detail-row span:first-child {
+  color: rgba(45,58,52,0.6);
+  flex-shrink: 0;
+}
+
+.enroll-detail-row span:last-child {
+  color: var(--color-ink);
+  font-weight: 500;
+  text-align: right;
+}
+
+.enroll-btn {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.enroll-guarantee {
+  text-align: center;
+  font-size: 0.78rem;
+  color: rgba(45,58,52,0.55);
+  margin-top: 12px;
+}
+
+/* INSTRUCTOR SECTION */
+.instructor-section {
+  background-color: var(--color-sage);
+  padding: 56px 0;
+}
+
+.instructor-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.instructor-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  border: 1px solid rgba(31,78,61,0.08);
+  max-width: 800px;
+}
+
+.instructor-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--color-forest);
+  color: white;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.instructor-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.instructor-title {
+  font-size: 0.85rem;
+  color: var(--color-leaf);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.instructor-bio {
+  font-size: 0.9rem;
+  color: rgba(45,58,52,0.8);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.instructor-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-forest);
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .enroll-card {
+    position: static;
+    order: -1;
+  }
+
+  .learn-list {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .schedule-header span:nth-child(3),
+  .schedule-header span:nth-child(4),
+  .schedule-row span:nth-child(3),
+  .schedule-row span:nth-child(4) {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .class-stats {
+    gap: 16px;
+  }
+
+  .instructor-card {
+    flex-direction: column;
+  }
+}
