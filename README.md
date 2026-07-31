@@ -1,4 +1,4 @@
-# 🌱 SkillSprout
+# SkillSprout
 
 A full stack two-sided marketplace that helps parents discover and enroll their children in skill-based activities — painting, music, dance, coding, sports, drama and more.
 
